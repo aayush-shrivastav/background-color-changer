@@ -34,7 +34,7 @@ function SetColor() {
 
         <button
           className="reset-btn"
-          onClick={setColor("white")}
+          onClick={()=>setColor("white")}
         >
           Reset Color
         </button>
