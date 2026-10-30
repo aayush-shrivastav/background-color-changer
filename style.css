@@ -1,0 +1,187 @@
+
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f1f5f9;
+  transition: background 0.4s ease;
+}
+
+/* Main Container */
+.color-picker {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* Glass Card */
+.color-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+
+/* Heading */
+.color-card h1 {
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.color-card .subtitle {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Color Preview */
+.color-preview {
+  height: 150px;
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.35s ease;
+}
+
+/* Selected Color */
+.selected-color {
+  color: #334155;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.selected-color span {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f172a;
+}
+
+/* Buttons Container */
+.btn-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-color button {
+  min-height: 48px;
+  padding: 12px 10px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Individual Colors */
+.btn-color button:nth-child(1) {
+  background: #ef4444;
+}
+
+.btn-color button:nth-child(2) {
+  background: #16a34a;
+}
+
+.btn-color button:nth-child(3) {
+  background: #eab308;
+  color: #422006;
+}
+
+.btn-color button:nth-child(4) {
+  background: #2563eb;
+}
+
+.btn-color button:nth-child(5) {
+  background: #ec4899;
+}
+
+/* Hover Effect */
+.btn-color button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+.btn-color button:active {
+  transform: scale(0.96);
+}
+
+/* Keyboard Accessibility */
+.btn-color button:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 4px;
+}
+
+/* Reset Button */
+.reset-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: #f8fafc;
+  border-color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .color-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .color-card h1 {
+    font-size: 26px;
+  }
+
+  .color-preview {
+    height: 120px;
+  }
+
+  .btn-color {
+    gap: 9px;
+  }
+
+  .btn-color button {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+}
